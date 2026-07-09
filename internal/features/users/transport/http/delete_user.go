@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	core_logger "github.com/nurassul/todoapp-golang/internal/core/logger"
+	core_http_utils "github.com/nurassul/todoapp-golang/internal/core/transport/http/request"
 	core_http_response "github.com/nurassul/todoapp-golang/internal/core/transport/http/response"
-	core_http_utils "github.com/nurassul/todoapp-golang/internal/core/transport/http/utils"
 )
 
 func (h *UsersHTTPHandler) DeleteUser(rw http.ResponseWriter, r *http.Request) {
