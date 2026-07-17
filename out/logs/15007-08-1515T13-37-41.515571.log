@@ -1,0 +1,35 @@
+15007-08-1515T18:37:41.516108	DEBUG	todoapp/main.go:37	initializing postgres connection pool
+15007-08-1515T18:37:41.593571	DEBUG	todoapp/main.go:47	initializing feature	{"feature": "users"}
+15007-08-1515T18:37:41.594144	DEBUG	todoapp/main.go:52	initializing feature	{"feature": "tasks"}
+15007-08-1515T18:37:41.594144	DEBUG	todoapp/main.go:57	initializing HTTP server
+15007-08-1515T18:37:41.599121	WARN	server/server.go:59	start HTTP server	{"addr": "0.0.0.0:8080"}
+15007-08-1515T18:38:01.003461	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "de28f618-b9ac-4205-91b5-c9433e1067d5", "url": "/api/v1/users/1990", "time": "15007-08-1515T13:38:01.003461"}
+15007-08-1515T18:38:01.039332	DEBUG	response/handler.go:66	failed to get user	{"request_id": "de28f618-b9ac-4205-91b5-c9433e1067d5", "url": "/api/v1/users/1990", "error": "get user from repository: user with id='1990': not found"}
+15007-08-1515T18:38:01.044767	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "de28f618-b9ac-4205-91b5-c9433e1067d5", "url": "/api/v1/users/1990", "status_code": 404, "latency": "41.306ms"}
+15007-08-1515T18:38:25.186299	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "02aa9d77-b827-4daa-b697-c1dc4a407491", "url": "/api/v1/users", "time": "15007-08-1515T13:38:25.186299"}
+15007-08-1515T18:38:25.200653	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "02aa9d77-b827-4daa-b697-c1dc4a407491", "url": "/api/v1/users", "status_code": 200, "latency": "14.3536ms"}
+15007-08-1515T18:39:03.722541	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "f027bf9a-a3d0-4a12-8e30-3d5c22b50c30", "url": "/api/v1/users", "time": "15007-08-1515T13:39:03.722541"}
+15007-08-1515T18:39:03.755366	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "f027bf9a-a3d0-4a12-8e30-3d5c22b50c30", "url": "/api/v1/users", "status_code": 201, "latency": "32.8245ms"}
+15007-08-1515T18:39:31.901477	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "d20e52dc-38a8-475a-8b54-7fac45796daa", "url": "/api/v1/users", "time": "15007-08-1515T13:39:31.901477"}
+15007-08-1515T18:39:31.913414	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "d20e52dc-38a8-475a-8b54-7fac45796daa", "url": "/api/v1/users", "status_code": 201, "latency": "11.9368ms"}
+15007-08-1515T18:39:36.770352	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "d3b216e1-0027-439e-8520-adb91f3e3359", "url": "/api/v1/users", "time": "15007-08-1515T13:39:36.770352"}
+15007-08-1515T18:39:36.777623	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "d3b216e1-0027-439e-8520-adb91f3e3359", "url": "/api/v1/users", "status_code": 200, "latency": "7.2717ms"}
+15007-08-1515T18:40:12.981892	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "e7ddbf1b-e503-4268-842a-dfec0bb49fcb", "url": "/api/v1/tasks", "time": "15007-08-1515T13:40:12.981892"}
+15007-08-1515T18:40:12.985706	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "e7ddbf1b-e503-4268-842a-dfec0bb49fcb", "url": "/api/v1/tasks", "status_code": 405, "latency": "3.8136ms"}
+15007-08-1515T18:40:16.710931	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "02bd0634-58ad-4170-ab77-ff1b4568b7f3", "url": "/api/v1/tasks", "time": "15007-08-1515T13:40:16.710931"}
+15007-08-1515T18:40:16.712492	WARN	response/handler.go:66	failed to decode and validate HTTP request	{"request_id": "02bd0634-58ad-4170-ab77-ff1b4568b7f3", "url": "/api/v1/tasks", "error": "request validation: Key: 'CreateTaskRequest.Title' Error:Field validation for 'Title' failed on the 'required' tag\nKey: 'CreateTaskRequest.AuthorUserID' Error:Field validation for 'AuthorUserID' failed on the 'required' tag: invalid argument"}
+15007-08-1515T18:40:16.713085	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "02bd0634-58ad-4170-ab77-ff1b4568b7f3", "url": "/api/v1/tasks", "status_code": 400, "latency": "2.1537ms"}
+15007-08-1515T18:40:43.763480	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "94e97ac5-8258-4f4a-902c-864ec17295d4", "url": "/api/v1/tasks", "time": "15007-08-1515T13:40:43.763480"}
+15007-08-1515T18:40:43.763480	WARN	response/handler.go:66	failed to decode and validate HTTP request	{"request_id": "94e97ac5-8258-4f4a-902c-864ec17295d4", "url": "/api/v1/tasks", "error": "decode json: EOF: invalid argument"}
+15007-08-1515T18:40:43.764033	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "94e97ac5-8258-4f4a-902c-864ec17295d4", "url": "/api/v1/tasks", "status_code": 400, "latency": "552.7µs"}
+15007-08-1515T18:41:01.314988	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "9ddb1df4-69e4-41ec-bf1b-5122455c6b3c", "url": "/api/v1/tasks", "time": "15007-08-1515T13:41:01.314988"}
+15007-08-1515T18:41:01.314988	WARN	response/handler.go:66	failed to decode and validate HTTP request	{"request_id": "9ddb1df4-69e4-41ec-bf1b-5122455c6b3c", "url": "/api/v1/tasks", "error": "request validation: Key: 'CreateTaskRequest.Title' Error:Field validation for 'Title' failed on the 'required' tag\nKey: 'CreateTaskRequest.AuthorUserID' Error:Field validation for 'AuthorUserID' failed on the 'required' tag: invalid argument"}
+15007-08-1515T18:41:01.315534	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "9ddb1df4-69e4-41ec-bf1b-5122455c6b3c", "url": "/api/v1/tasks", "status_code": 400, "latency": "546µs"}
+15007-08-1515T18:41:26.708874	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "7ba468e9-da36-449d-809a-9cd4cacbd883", "url": "/api/v1/tasks", "time": "15007-08-1515T13:41:26.708874"}
+15007-08-1515T18:41:26.710006	WARN	response/handler.go:66	failed to decode and validate HTTP request	{"request_id": "7ba468e9-da36-449d-809a-9cd4cacbd883", "url": "/api/v1/tasks", "error": "request validation: Key: 'CreateTaskRequest.AuthorUserID' Error:Field validation for 'AuthorUserID' failed on the 'required' tag: invalid argument"}
+15007-08-1515T18:41:26.710553	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "7ba468e9-da36-449d-809a-9cd4cacbd883", "url": "/api/v1/tasks", "status_code": 400, "latency": "1.6796ms"}
+15007-08-1515T18:41:40.360961	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "9695d4a3-8077-4956-8cfb-f0c1a598160a", "url": "/api/v1/tasks", "time": "15007-08-1515T13:41:40.360961"}
+15007-08-1515T18:41:40.414694	ERROR	response/handler.go:66	failed to create task	{"request_id": "9695d4a3-8077-4956-8cfb-f0c1a598160a", "url": "/api/v1/tasks", "error": "create task: scan error: ERROR: column \"descriptin\" of relation \"tasks\" does not exist (SQLSTATE 42703): unknown"}
+15007-08-1515T18:41:40.415263	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "9695d4a3-8077-4956-8cfb-f0c1a598160a", "url": "/api/v1/tasks", "status_code": 500, "latency": "54.302ms"}
+15007-08-1515T18:42:24.272112	WARN	server/server.go:73	shutdown HTTP server...
+15007-08-1515T18:42:24.274579	WARN	server/server.go:87	HTTP server stopped
