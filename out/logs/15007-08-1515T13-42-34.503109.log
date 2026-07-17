@@ -1,0 +1,14 @@
+15007-08-1515T18:42:34.504201	DEBUG	todoapp/main.go:37	initializing postgres connection pool
+15007-08-1515T18:42:34.606970	DEBUG	todoapp/main.go:47	initializing feature	{"feature": "users"}
+15007-08-1515T18:42:34.607480	DEBUG	todoapp/main.go:52	initializing feature	{"feature": "tasks"}
+15007-08-1515T18:42:34.607480	DEBUG	todoapp/main.go:57	initializing HTTP server
+15007-08-1515T18:42:34.608583	WARN	server/server.go:59	start HTTP server	{"addr": "0.0.0.0:8080"}
+15007-08-1515T18:42:44.205089	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "acd99888-1e0a-44b1-994a-4a4a10e9ebed", "url": "/api/v1/tasks", "time": "15007-08-1515T13:42:44.205089"}
+15007-08-1515T18:42:44.238304	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "acd99888-1e0a-44b1-994a-4a4a10e9ebed", "url": "/api/v1/tasks", "status_code": 201, "latency": "33.2156ms"}
+15007-08-1515T18:43:30.767989	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "c185fb18-f907-4095-a699-843c8e01a38c", "url": "/api/v1/tasks", "time": "15007-08-1515T13:43:30.767989"}
+15007-08-1515T18:43:30.821603	DEBUG	response/handler.go:66	failed to create task	{"request_id": "c185fb18-f907-4095-a699-843c8e01a38c", "url": "/api/v1/tasks", "error": "create task: ERROR: insert or update on table \"tasks\" violates foreign key constraint \"tasks_author_user_id_fkey\" (SQLSTATE 23503): violates foreign key,: user with id='100': not found"}
+15007-08-1515T18:43:30.822606	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "c185fb18-f907-4095-a699-843c8e01a38c", "url": "/api/v1/tasks", "status_code": 404, "latency": "54.6172ms"}
+15007-08-1515T18:45:22.626738	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "aca76f33-e7b9-40e1-b5a7-b04f6417ee9a", "url": "/api/v1/tasks", "time": "15007-08-1515T13:45:22.626738"}
+15007-08-1515T18:45:22.644737	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "aca76f33-e7b9-40e1-b5a7-b04f6417ee9a", "url": "/api/v1/tasks", "status_code": 201, "latency": "17.9994ms"}
+15007-08-1515T18:47:32.554156	WARN	server/server.go:73	shutdown HTTP server...
+15007-08-1515T18:47:32.559265	WARN	server/server.go:87	HTTP server stopped

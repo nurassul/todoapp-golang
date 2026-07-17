@@ -1,0 +1,15 @@
+16007-08-1616T14:50:24.629508	DEBUG	todoapp/main.go:44	application time zone	{"zone": "UTC"}
+16007-08-1616T14:50:24.630056	DEBUG	todoapp/main.go:46	initializing postgres connection pool
+16007-08-1616T14:50:24.701280	DEBUG	todoapp/main.go:56	initializing feature	{"feature": "users"}
+16007-08-1616T14:50:24.701821	DEBUG	todoapp/main.go:61	initializing feature	{"feature": "tasks"}
+16007-08-1616T14:50:24.701821	DEBUG	todoapp/main.go:66	initializing HTTP server
+16007-08-1616T14:50:24.702381	WARN	server/server.go:59	start HTTP server	{"addr": "0.0.0.0:8080"}
+16007-08-1616T14:50:34.170580	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "a43f8fbb-d881-46d4-aa7e-749e5cd0a94e", "url": "/api/v1/tasks/5", "time": "16007-08-1616T14:50:34.170580"}
+16007-08-1616T14:50:34.241323	DEBUG	response/handler.go:66	failed to delete task	{"request_id": "a43f8fbb-d881-46d4-aa7e-749e5cd0a94e", "url": "/api/v1/tasks/5", "error": "delete task from repository: task with id='5': not found"}
+16007-08-1616T14:50:34.241883	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "a43f8fbb-d881-46d4-aa7e-749e5cd0a94e", "url": "/api/v1/tasks/5", "status_code": 404, "latency": "71.3033ms"}
+16007-08-1616T14:50:41.242991	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "abb3cb43-fac2-4828-9328-bd5446b050a4", "url": "/api/v1/tasks/4", "time": "16007-08-1616T14:50:41.242991"}
+16007-08-1616T14:50:41.292431	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "abb3cb43-fac2-4828-9328-bd5446b050a4", "url": "/api/v1/tasks/4", "status_code": 204, "latency": "49.4396ms"}
+16007-08-1616T14:50:53.798742	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "aac17eaa-a16e-41e3-a4f1-dd03d0c98cd7", "url": "/api/v1/tasks", "time": "16007-08-1616T14:50:53.798742"}
+16007-08-1616T14:50:53.846796	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "aac17eaa-a16e-41e3-a4f1-dd03d0c98cd7", "url": "/api/v1/tasks", "status_code": 200, "latency": "48.0533ms"}
+16007-08-1616T14:58:37.689917	WARN	server/server.go:73	shutdown HTTP server...
+16007-08-1616T14:58:37.692130	WARN	server/server.go:87	HTTP server stopped

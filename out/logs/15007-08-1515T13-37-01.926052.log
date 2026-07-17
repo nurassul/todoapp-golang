@@ -1,0 +1,4 @@
+15007-08-1515T18:37:01.927173	DEBUG	todoapp/main.go:37	initializing postgres connection pool
+15007-08-1515T18:37:02.021705	DEBUG	todoapp/main.go:47	initializing feature	{"feature": "users"}
+15007-08-1515T18:37:02.021705	DEBUG	todoapp/main.go:52	initializing feature	{"feature": "tasks"}
+15007-08-1515T18:37:02.022271	DEBUG	todoapp/main.go:57	initializing HTTP server

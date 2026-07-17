@@ -1,0 +1,10 @@
+15007-08-1515T15:31:39.574863	DEBUG	todoapp/main.go:44	application time zone	{"zone": "UTC"}
+15007-08-1515T15:31:39.575389	DEBUG	todoapp/main.go:46	initializing postgres connection pool
+15007-08-1515T15:31:39.685199	DEBUG	todoapp/main.go:56	initializing feature	{"feature": "users"}
+15007-08-1515T15:31:39.685770	DEBUG	todoapp/main.go:61	initializing feature	{"feature": "tasks"}
+15007-08-1515T15:31:39.685770	DEBUG	todoapp/main.go:66	initializing HTTP server
+15007-08-1515T15:31:39.686321	WARN	server/server.go:59	start HTTP server	{"addr": "0.0.0.0:8080"}
+15007-08-1515T15:32:42.556796	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "08837b69-85ef-4638-b244-93ea83031ba8", "url": "/api/v1/tasks", "time": "15007-08-1515T15:32:42.556796"}
+15007-08-1515T15:32:42.599353	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "08837b69-85ef-4638-b244-93ea83031ba8", "url": "/api/v1/tasks", "status_code": 200, "latency": "42.5571ms"}
+15007-08-1515T15:36:10.468347	WARN	server/server.go:73	shutdown HTTP server...
+15007-08-1515T15:36:10.469489	WARN	server/server.go:87	HTTP server stopped

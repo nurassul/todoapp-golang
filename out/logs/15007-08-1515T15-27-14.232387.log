@@ -1,0 +1,14 @@
+15007-08-1515T15:27:14.232912	DEBUG	todoapp/main.go:44	application time zone	{"zone": "UTC"}
+15007-08-1515T15:27:14.233900	DEBUG	todoapp/main.go:46	initializing postgres connection pool
+15007-08-1515T15:27:14.363532	DEBUG	todoapp/main.go:56	initializing feature	{"feature": "users"}
+15007-08-1515T15:27:14.364093	DEBUG	todoapp/main.go:61	initializing feature	{"feature": "tasks"}
+15007-08-1515T15:27:14.364093	DEBUG	todoapp/main.go:66	initializing HTTP server
+15007-08-1515T15:27:14.364093	WARN	server/server.go:59	start HTTP server	{"addr": "0.0.0.0:8080"}
+15007-08-1515T15:27:50.700221	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "23833476-21a6-4b5b-8701-2b8c03bc1b6f", "url": "/api/v1/tasks", "time": "15007-08-1515T15:27:50.700221"}
+15007-08-1515T15:27:50.766877	ERROR	response/handler.go:66	failed to get tasks	{"request_id": "23833476-21a6-4b5b-8701-2b8c03bc1b6f", "url": "/api/v1/tasks", "error": "get tasks from repository: select tasks: expected 2 arguments, got 1"}
+15007-08-1515T15:27:50.767408	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "23833476-21a6-4b5b-8701-2b8c03bc1b6f", "url": "/api/v1/tasks", "status_code": 500, "latency": "67.187ms"}
+15007-08-1515T15:28:38.533767	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "78f966dd-8822-44fd-99bb-9312054a2fe4", "url": "/api/v1/tasks", "time": "15007-08-1515T15:28:38.533767"}
+15007-08-1515T15:28:38.543250	ERROR	response/handler.go:66	failed to get tasks	{"request_id": "78f966dd-8822-44fd-99bb-9312054a2fe4", "url": "/api/v1/tasks", "error": "get tasks from repository: select tasks: expected 2 arguments, got 1"}
+15007-08-1515T15:28:38.543803	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "78f966dd-8822-44fd-99bb-9312054a2fe4", "url": "/api/v1/tasks", "status_code": 500, "latency": "10.0362ms"}
+15007-08-1515T15:31:31.138319	WARN	server/server.go:73	shutdown HTTP server...
+15007-08-1515T15:31:31.140406	WARN	server/server.go:87	HTTP server stopped
