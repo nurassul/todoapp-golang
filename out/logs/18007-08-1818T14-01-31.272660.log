@@ -1,0 +1,15 @@
+18007-08-1818T14:01:31.273763	DEBUG	todoapp/main.go:47	application time zone	{"zone": "UTC"}
+18007-08-1818T14:01:31.274310	DEBUG	todoapp/main.go:49	initializing postgres connection pool
+18007-08-1818T14:01:31.336359	DEBUG	todoapp/main.go:59	initializing feature	{"feature": "users"}
+18007-08-1818T14:01:31.336359	DEBUG	todoapp/main.go:64	initializing feature	{"feature": "tasks"}
+18007-08-1818T14:01:31.336918	DEBUG	todoapp/main.go:69	initializing feature	{"featrue": "statistics"}
+18007-08-1818T14:01:31.336918	DEBUG	todoapp/main.go:74	initializing HTTP server
+18007-08-1818T14:01:31.338014	WARN	server/server.go:59	start HTTP server	{"addr": "0.0.0.0:8080"}
+18007-08-1818T14:01:46.162108	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "2167d3cd-1f68-45e3-9599-f4726af24359", "url": "/api/v1/statistics", "time": "18007-08-1818T14:01:46.162108"}
+18007-08-1818T14:01:46.204184	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "2167d3cd-1f68-45e3-9599-f4726af24359", "url": "/api/v1/statistics", "status_code": 200, "latency": "42.076ms"}
+18007-08-1818T14:01:57.125373	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "61ba4a0f-abdb-4f11-84d9-b28d39ca6619", "url": "/api/v1/tasks", "time": "18007-08-1818T14:01:57.125373"}
+18007-08-1818T14:01:57.137601	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "61ba4a0f-abdb-4f11-84d9-b28d39ca6619", "url": "/api/v1/tasks", "status_code": 200, "latency": "12.2281ms"}
+18007-08-1818T14:07:41.293115	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "c1b1d5ea-16e6-4102-869c-9602310f8412", "url": "/api/v1/statistics", "time": "18007-08-1818T14:07:41.293115"}
+18007-08-1818T14:07:41.302695	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "c1b1d5ea-16e6-4102-869c-9602310f8412", "url": "/api/v1/statistics", "status_code": 200, "latency": "9.5802ms"}
+18007-08-1818T14:18:51.949081	WARN	server/server.go:73	shutdown HTTP server...
+18007-08-1818T14:18:51.950195	WARN	server/server.go:87	HTTP server stopped
