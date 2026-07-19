@@ -142,6 +142,20 @@ func (p *TaskPatch) Validate() error {
 	return nil
 }
 
+func (t *Task) CompletionDuration() *time.Duration {
+	if !t.Completed {
+		return nil
+	}
+
+	if t.CompletedAt == nil {
+		return nil
+	}
+
+	duration := t.CompletedAt.Sub(t.CreatedAt)
+
+	return &duration
+}
+
 func (t *Task) ApplyPatch(patch TaskPatch) error {
 	if err := patch.Validate(); err != nil {
 		return fmt.Errorf("validate task patch: %w", err)

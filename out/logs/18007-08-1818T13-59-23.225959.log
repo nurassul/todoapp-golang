@@ -1,0 +1,15 @@
+18007-08-1818T13:59:23.226990	DEBUG	todoapp/main.go:47	application time zone	{"zone": "UTC"}
+18007-08-1818T13:59:23.227548	DEBUG	todoapp/main.go:49	initializing postgres connection pool
+18007-08-1818T13:59:23.383581	DEBUG	todoapp/main.go:59	initializing feature	{"feature": "users"}
+18007-08-1818T13:59:23.384134	DEBUG	todoapp/main.go:64	initializing feature	{"feature": "tasks"}
+18007-08-1818T13:59:23.384134	DEBUG	todoapp/main.go:69	initializing feature	{"featrue": "statistics"}
+18007-08-1818T13:59:23.384697	DEBUG	todoapp/main.go:74	initializing HTTP server
+18007-08-1818T13:59:23.385243	WARN	server/server.go:59	start HTTP server	{"addr": "0.0.0.0:8080"}
+18007-08-1818T14:00:36.377506	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "c2ff1b30-c275-4573-bc6e-85eb6bbcba1d", "url": "/api/v1/statistics", "time": "18007-08-1818T14:00:36.377506"}
+18007-08-1818T14:00:36.446387	ERROR	response/handler.go:66	failed to get stats	{"request_id": "c2ff1b30-c275-4573-bc6e-85eb6bbcba1d", "url": "/api/v1/statistics", "error": "get tasks from repository: select tasks: ERROR: column \"desscription\" does not exist (SQLSTATE 42703)"}
+18007-08-1818T14:00:36.447657	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "c2ff1b30-c275-4573-bc6e-85eb6bbcba1d", "url": "/api/v1/statistics", "status_code": 200, "latency": "70.1514ms"}
+18007-08-1818T14:01:02.004357	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "12396c03-8c55-4568-a73c-70699abfe5a3", "url": "/api/v1/statistics", "time": "18007-08-1818T14:01:02.004357"}
+18007-08-1818T14:01:02.058582	ERROR	response/handler.go:66	failed to get stats	{"request_id": "12396c03-8c55-4568-a73c-70699abfe5a3", "url": "/api/v1/statistics", "error": "get tasks from repository: select tasks: ERROR: column \"desscription\" does not exist (SQLSTATE 42703)"}
+18007-08-1818T14:01:02.059155	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "12396c03-8c55-4568-a73c-70699abfe5a3", "url": "/api/v1/statistics", "status_code": 200, "latency": "54.7979ms"}
+18007-08-1818T14:01:23.204695	WARN	server/server.go:73	shutdown HTTP server...
+18007-08-1818T14:01:23.205798	WARN	server/server.go:87	HTTP server stopped

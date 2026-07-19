@@ -52,6 +52,16 @@ env-port-forward:
 env-port-close:
 	@docker compose down todoapp-postgres
 
+
+logs-cleanup:
+	@read -p "Clean all log files? [y/N]: " ans; \
+	if [ "$$ans" = "y" ]; then \
+	  rm -rf ${PROJECT_ROOT}/out/logs && \
+	  echo "Logs were cleaned up"; \
+	else \
+	  echo "Cleaning was canceled"; \
+	fi
+
 todoapp-run:
 	@export LOGGER_FOLDER=${PROJECT_ROOT}/out/logs && \
 	export POSTGRES_HOST=localhost && \

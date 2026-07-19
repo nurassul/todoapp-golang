@@ -12,6 +12,9 @@ import (
 	"github.com/nurassul/todoapp-golang/internal/core/repository/postgres/pool/pgx"
 	core_http_middleware "github.com/nurassul/todoapp-golang/internal/core/transport/http/middleware"
 	core_http_server "github.com/nurassul/todoapp-golang/internal/core/transport/http/server"
+	statistics_postgres_repository "github.com/nurassul/todoapp-golang/internal/features/statistics/repository/postgres"
+	statistics_service "github.com/nurassul/todoapp-golang/internal/features/statistics/service"
+	statistics_trasport_http "github.com/nurassul/todoapp-golang/internal/features/statistics/transport/http"
 	tasks_postgres_repository "github.com/nurassul/todoapp-golang/internal/features/tasks/repository/postgres"
 	tasks_service "github.com/nurassul/todoapp-golang/internal/features/tasks/service"
 	tasks_transport "github.com/nurassul/todoapp-golang/internal/features/tasks/transport/http"
@@ -63,6 +66,11 @@ func main() {
 	tasksService := tasks_service.NewTasksService(tasksRepository)
 	tasksTransportHTTP := tasks_transport.NewTasksHTTPHandler(tasksService)
 
+	logger.Debug("initializing feature", zap.String("featrue", "statistics"))
+	statisticsRepository := statistics_postgres_repository.NewStatisticsRepository(pool)
+	statisticsService := statistics_service.NewStatisticsService(statisticsRepository)
+	statisticsTransportHTTP := statistics_trasport_http.NewStatisticsHTTPHandler(statisticsService)
+
 	logger.Debug("initializing HTTP server")
 	httpServer := core_http_server.NewHTTPServer(
 		core_http_server.NewConfigMust(),
@@ -75,6 +83,7 @@ func main() {
 	apiVersionRouter := core_http_server.NewAPIVersionRouter(core_http_server.ApiVersion1)
 	apiVersionRouter.RegisterRoutes(usersTransportHTTP.Routes()...)
 	apiVersionRouter.RegisterRoutes(tasksTransportHTTP.Routes()...)
+	apiVersionRouter.RegisterRoutes(statisticsTransportHTTP.Routes()...)
 	httpServer.RegisterAPIRouters(apiVersionRouter)
 
 	if err := httpServer.Run(ctx); err != nil {

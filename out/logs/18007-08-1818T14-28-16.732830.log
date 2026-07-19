@@ -1,0 +1,11 @@
+18007-08-1818T14:28:16.733903	DEBUG	todoapp/main.go:47	application time zone	{"zone": "UTC"}
+18007-08-1818T14:28:16.734486	DEBUG	todoapp/main.go:49	initializing postgres connection pool
+18007-08-1818T14:28:16.835667	DEBUG	todoapp/main.go:59	initializing feature	{"feature": "users"}
+18007-08-1818T14:28:16.836233	DEBUG	todoapp/main.go:64	initializing feature	{"feature": "tasks"}
+18007-08-1818T14:28:16.836233	DEBUG	todoapp/main.go:69	initializing feature	{"featrue": "statistics"}
+18007-08-1818T14:28:16.836233	DEBUG	todoapp/main.go:74	initializing HTTP server
+18007-08-1818T14:28:16.838128	WARN	server/server.go:59	start HTTP server	{"addr": "0.0.0.0:8080"}
+18007-08-1818T14:28:32.471116	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "25348eb6-274d-4e0f-8747-3798276f4470", "url": "/api/v1/statistics?user_id=1", "time": "18007-08-1818T14:28:32.471116"}
+18007-08-1818T14:28:32.508728	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "25348eb6-274d-4e0f-8747-3798276f4470", "url": "/api/v1/statistics?user_id=1", "status_code": 200, "latency": "37.6115ms"}
+19007-08-1919T12:34:51.538879	WARN	server/server.go:73	shutdown HTTP server...
+19007-08-1919T12:34:51.540695	WARN	server/server.go:87	HTTP server stopped

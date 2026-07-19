@@ -1,0 +1,47 @@
+18007-08-1818T14:19:04.814379	DEBUG	todoapp/main.go:47	application time zone	{"zone": "UTC"}
+18007-08-1818T14:19:04.814926	DEBUG	todoapp/main.go:49	initializing postgres connection pool
+18007-08-1818T14:19:04.865249	DEBUG	todoapp/main.go:59	initializing feature	{"feature": "users"}
+18007-08-1818T14:19:04.865801	DEBUG	todoapp/main.go:64	initializing feature	{"feature": "tasks"}
+18007-08-1818T14:19:04.865801	DEBUG	todoapp/main.go:69	initializing feature	{"featrue": "statistics"}
+18007-08-1818T14:19:04.865801	DEBUG	todoapp/main.go:74	initializing HTTP server
+18007-08-1818T14:19:04.867540	WARN	server/server.go:59	start HTTP server	{"addr": "0.0.0.0:8080"}
+18007-08-1818T14:19:19.806403	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "78d77290-2d20-4ec3-85ae-cc6361af735b", "url": "/api/v1/statistics", "time": "18007-08-1818T14:19:19.806403"}
+18007-08-1818T14:19:19.841917	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "78d77290-2d20-4ec3-85ae-cc6361af735b", "url": "/api/v1/statistics", "status_code": 200, "latency": "35.5136ms"}
+18007-08-1818T14:19:45.401261	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "a6dcb26d-078a-4126-9fe0-71fee295660f", "url": "/api/v1/tasks/1", "time": "18007-08-1818T14:19:45.401261"}
+18007-08-1818T14:19:45.480599	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "a6dcb26d-078a-4126-9fe0-71fee295660f", "url": "/api/v1/tasks/1", "status_code": 200, "latency": "79.3379ms"}
+18007-08-1818T14:19:51.284587	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "59093d95-2d41-4ca2-8c20-da8d2ae10db9", "url": "/api/v1/statistics", "time": "18007-08-1818T14:19:51.284587"}
+18007-08-1818T14:19:51.290435	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "59093d95-2d41-4ca2-8c20-da8d2ae10db9", "url": "/api/v1/statistics", "status_code": 200, "latency": "5.8482ms"}
+18007-08-1818T14:22:11.344968	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "a3ac6996-7d61-4c11-8119-33886a8b1d5e", "url": "/api/v1/statistics?user_id=1", "time": "18007-08-1818T14:22:11.344968"}
+18007-08-1818T14:22:11.351501	ERROR	response/handler.go:66	failed to get stats	{"request_id": "a3ac6996-7d61-4c11-8119-33886a8b1d5e", "url": "/api/v1/statistics?user_id=1", "error": "get tasks from repository: select tasks: expected 0 arguments, got 1"}
+18007-08-1818T14:22:11.352654	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "a3ac6996-7d61-4c11-8119-33886a8b1d5e", "url": "/api/v1/statistics?user_id=1", "status_code": 200, "latency": "7.6857ms"}
+18007-08-1818T14:22:29.051187	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "b0e40e40-a9d8-46ac-a951-7e4ebc3796ff", "url": "/api/v1/statistics?user_id=2", "time": "18007-08-1818T14:22:29.051187"}
+18007-08-1818T14:22:29.063723	ERROR	response/handler.go:66	failed to get stats	{"request_id": "b0e40e40-a9d8-46ac-a951-7e4ebc3796ff", "url": "/api/v1/statistics?user_id=2", "error": "get tasks from repository: select tasks: expected 0 arguments, got 1"}
+18007-08-1818T14:22:29.065511	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "b0e40e40-a9d8-46ac-a951-7e4ebc3796ff", "url": "/api/v1/statistics?user_id=2", "status_code": 200, "latency": "14.3246ms"}
+18007-08-1818T14:22:32.850654	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "79019d0c-d2cc-4a5e-91eb-74f0bec14154", "url": "/api/v1/statistics?user_id=2", "time": "18007-08-1818T14:22:32.850654"}
+18007-08-1818T14:22:32.860361	ERROR	response/handler.go:66	failed to get stats	{"request_id": "79019d0c-d2cc-4a5e-91eb-74f0bec14154", "url": "/api/v1/statistics?user_id=2", "error": "get tasks from repository: select tasks: expected 0 arguments, got 1"}
+18007-08-1818T14:22:32.861469	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "79019d0c-d2cc-4a5e-91eb-74f0bec14154", "url": "/api/v1/statistics?user_id=2", "status_code": 200, "latency": "10.815ms"}
+18007-08-1818T14:22:53.707671	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "2aa00d76-754c-452e-ae8b-f7567b97af56", "url": "/api/v1/statistics?user_id=1", "time": "18007-08-1818T14:22:53.707671"}
+18007-08-1818T14:22:53.716654	ERROR	response/handler.go:66	failed to get stats	{"request_id": "2aa00d76-754c-452e-ae8b-f7567b97af56", "url": "/api/v1/statistics?user_id=1", "error": "get tasks from repository: select tasks: expected 0 arguments, got 1"}
+18007-08-1818T14:22:53.717810	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "2aa00d76-754c-452e-ae8b-f7567b97af56", "url": "/api/v1/statistics?user_id=1", "status_code": 200, "latency": "10.1385ms"}
+18007-08-1818T14:23:06.367493	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "efd30482-3dce-47fd-aa41-8823f753433f", "url": "/api/v1/statistics?user_id=1", "time": "18007-08-1818T14:23:06.367493"}
+18007-08-1818T14:23:06.379061	ERROR	response/handler.go:66	failed to get stats	{"request_id": "efd30482-3dce-47fd-aa41-8823f753433f", "url": "/api/v1/statistics?user_id=1", "error": "get tasks from repository: select tasks: expected 0 arguments, got 1"}
+18007-08-1818T14:23:06.379713	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "efd30482-3dce-47fd-aa41-8823f753433f", "url": "/api/v1/statistics?user_id=1", "status_code": 200, "latency": "12.2204ms"}
+18007-08-1818T14:23:11.072625	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "2651a8fd-13e0-4af8-8859-db25d72181dd", "url": "/api/v1/statistics", "time": "18007-08-1818T14:23:11.072625"}
+18007-08-1818T14:23:11.084544	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "2651a8fd-13e0-4af8-8859-db25d72181dd", "url": "/api/v1/statistics", "status_code": 200, "latency": "11.9191ms"}
+18007-08-1818T14:23:20.137268	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "0560f095-3c6e-41cb-b688-7b3ca24decd2", "url": "/api/v1/statistics?user_id=1", "time": "18007-08-1818T14:23:20.137268"}
+18007-08-1818T14:23:20.144782	ERROR	response/handler.go:66	failed to get stats	{"request_id": "0560f095-3c6e-41cb-b688-7b3ca24decd2", "url": "/api/v1/statistics?user_id=1", "error": "get tasks from repository: select tasks: expected 0 arguments, got 1"}
+18007-08-1818T14:23:20.146405	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "0560f095-3c6e-41cb-b688-7b3ca24decd2", "url": "/api/v1/statistics?user_id=1", "status_code": 200, "latency": "9.1374ms"}
+18007-08-1818T14:23:45.241671	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "b41dc546-7592-4d52-9521-563da0c04249", "url": "/api/v1/statistics?user_id=2", "time": "18007-08-1818T14:23:45.241671"}
+18007-08-1818T14:23:45.249428	ERROR	response/handler.go:66	failed to get stats	{"request_id": "b41dc546-7592-4d52-9521-563da0c04249", "url": "/api/v1/statistics?user_id=2", "error": "get tasks from repository: select tasks: expected 0 arguments, got 1"}
+18007-08-1818T14:23:45.250516	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "b41dc546-7592-4d52-9521-563da0c04249", "url": "/api/v1/statistics?user_id=2", "status_code": 200, "latency": "8.8448ms"}
+18007-08-1818T14:24:58.065613	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "b7facdd5-4057-4742-84da-4472ad0e00b0", "url": "/api/v1/task%D1%8B", "time": "18007-08-1818T14:24:58.065613"}
+18007-08-1818T14:24:58.066121	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "b7facdd5-4057-4742-84da-4472ad0e00b0", "url": "/api/v1/task%D1%8B", "status_code": 404, "latency": "507.9µs"}
+18007-08-1818T14:25:04.609004	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "23025049-ad83-487a-942d-7b29028fa9af", "url": "/api/v1/tasks", "time": "18007-08-1818T14:25:04.609004"}
+18007-08-1818T14:25:04.623075	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "23025049-ad83-487a-942d-7b29028fa9af", "url": "/api/v1/tasks", "status_code": 200, "latency": "14.0712ms"}
+18007-08-1818T14:25:24.793547	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "f26839db-4031-402b-9bff-b2d3e4f82cec", "url": "/api/v1/statistics", "time": "18007-08-1818T14:25:24.793547"}
+18007-08-1818T14:25:24.800541	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "f26839db-4031-402b-9bff-b2d3e4f82cec", "url": "/api/v1/statistics", "status_code": 200, "latency": "6.9936ms"}
+18007-08-1818T14:25:35.555598	DEBUG	middleware/common.go:60	>>> incoming HTTP request	{"request_id": "51774da8-b223-4600-94e9-34fb4dce432c", "url": "/api/v1/statistics?user_id=1", "time": "18007-08-1818T14:25:35.555598"}
+18007-08-1818T14:25:35.563219	ERROR	response/handler.go:66	failed to get stats	{"request_id": "51774da8-b223-4600-94e9-34fb4dce432c", "url": "/api/v1/statistics?user_id=1", "error": "get tasks from repository: select tasks: expected 0 arguments, got 1"}
+18007-08-1818T14:25:35.563781	DEBUG	middleware/common.go:66	<<< done HTTP request	{"request_id": "51774da8-b223-4600-94e9-34fb4dce432c", "url": "/api/v1/statistics?user_id=1", "status_code": 200, "latency": "8.183ms"}
+18007-08-1818T14:28:06.538904	WARN	server/server.go:73	shutdown HTTP server...
+18007-08-1818T14:28:06.540220	WARN	server/server.go:87	HTTP server stopped
